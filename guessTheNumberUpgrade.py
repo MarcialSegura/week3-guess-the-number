@@ -38,7 +38,7 @@ def askUserToGuess( times, secretNumber ):
 
         if evaluateAnswer( guess, secretNumber ) == True:
             return True
-        return False
+    return False
 # end of askUserToGuess function ----------------------------------
 
 
@@ -48,7 +48,7 @@ def askUserToGuess( times, secretNumber ):
 #   the 'userGuess' parameter is the answer entered by the user
 #   the 'userSecretNumber' parameter is the randomly generated number
 def evaluateAnswer( userGuess, userSecretNumber ):
-     if userGuess < userSecretNumber:
+    if userGuess < userSecretNumber:
        print ('Your guess is too low')
        return False
     elif userGuess > userSecretNumber:
@@ -80,13 +80,13 @@ def evaluateAnswer( userGuess, userSecretNumber ):
 #       True, we'll show the right answer on the screen
 #       False, we won't show the right answer on the screen
 def playGame( showAnswer ):
-   print('Why hello there! would you like to play a guessing game?')
-   print('Now I want you to start off by guessing the highest number you can think off')
-   topLimit = int(input())
-   print('Silly question, but how many times would you like to guess?')
-   totalGuesses = int(input())
-   theNumber = toplimit
-   print ('Guess what? Now you have ' + str(totalGuesses) + ' times to guess a number between 1 and ' + str(topLimit))
+    print('Why hello there! would you like to play a guessing game?')
+    print('Now I want you to start off by guessing the highest number you can think off')
+    userinput = int(input()) 
+    print('Silly question, but how many times would you like to guess?')
+    totalGuesses = int(input())
+    theNumber = generateNumber(userinput)
+    print ('Guess what? Now you have ' + str(totalGuesses) + ' times to guess a number between 1 and ' + str(userinput))
    
     
     
